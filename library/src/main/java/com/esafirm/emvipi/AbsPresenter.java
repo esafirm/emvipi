@@ -58,6 +58,10 @@ public abstract class AbsPresenter<V extends MvpView> implements Presenter<V> {
         return nullView;
     }
 
+    public boolean isViewAttached(){
+        return view != null && nullView != null;
+    }
+
     /* --------------------------------------------------- */
     /* > Helper */
     /* --------------------------------------------------- */
