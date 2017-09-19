@@ -39,7 +39,7 @@ public abstract class AbsPresenter<V extends MvpView> implements Presenter<V> {
     public void detachView() {
         view = null;
         if (isUsingNullObject) {
-            nullView = NullObject.create(classOfView);
+            nullView = NullObject.INSTANCE.create(classOfView);
         }
         onViewDetached();
     }
@@ -58,7 +58,7 @@ public abstract class AbsPresenter<V extends MvpView> implements Presenter<V> {
         return nullView;
     }
 
-    public boolean isViewAttached(){
+    public boolean isViewAttached() {
         return view != null && nullView != null;
     }
 

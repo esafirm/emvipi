@@ -1,4 +1,3 @@
 package com.esafirm.emvipi
 
-data class TestData(val title: String) {
-}
+data class TestData(val title: String)
